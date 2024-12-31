@@ -11,3 +11,7 @@ git commit -m "커밋 메시지"
 
 git 에 전송됨
 git push origin main
+
+깃 허브에서 가져오기
+
+git pull origin main
