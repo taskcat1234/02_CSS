@@ -1,0 +1,49 @@
+*{
+  box-sizing: border-box;
+
+  /* 맨처음에 꼭 넣어둘것 */
+  /* 
+  - width/height 설정 시
+    설정 된 값이 content + padding + border 크기를
+    합산한 결과가 되도록
+    content 영역의 크기를 자동으로 조정
+  */
+}
+
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: lightcoral;
+}
+
+/* border */
+.border{
+  /* border : 두께 스타일 색상
+    -> 요소
+  */
+  border : 10px solid black
+}
+
+/* content(내용) */
+.content{
+  width: 150px;
+  height: 150px;
+  box-sizing: content-box; /* width/height 설정값이 content에만 적용 */
+}
+
+/* padding(채우기) */
+.padding{
+  padding: 20px;
+  /* content - border 사이에 20px만큼의 공간 생성(네방향) */
+}
+
+/* margin(여백, 간격) */
+.margin-1{
+  margin: 50px; /* 상하 좌우 50px만큼 마진을 남기겠다 (총 100씩 늘어남)*/
+}
+
+.margin-2{
+  margin: 100px; /* 상하 좌우 100px만큼 마진을 남기겠다 */
+}
+/* margin이 겹치게 되면 더큰 마진의 영역만큼 넓어짐 더큰값만 적용됨 */

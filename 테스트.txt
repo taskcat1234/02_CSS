@@ -1,1 +1,13 @@
 깃허브 테스트중
+저장방법
+
+git remote add origin 저장소URL
+
+내부 git 에 파일 올리는 명령어
+git add .
+
+보내기전 git 허브에 남길 메시지
+git commit -m "커밋 메시지"
+
+git 에 전송됨
+git push origin main
