@@ -1,0 +1,150 @@
+*{
+  box-sizing: border-box;
+  padding: 0; /* 다른 요소와의 간격 */
+  margin: 0; /* content, border 사이 간격 */
+}
+
+div{
+  border: 1px solid black;
+}
+
+h1, h3{
+  margin: 10px 0; /* 상하 / 좌우 */
+  text-decoration: underline;
+}
+
+
+
+/* 상하 2분할 */
+.container-1{
+  width: 500px;
+  height: 600px;
+  margin: 20px;
+}
+
+.container-1 > div {
+  width: 100%;
+  height: 50%;
+}
+
+.container-1 > div:first-child{
+  background-color: orange;
+}
+
+.container-1 > div:last-child{
+  background-color: pink;
+}
+
+.container-2{
+  width: 300px;
+  height: 432px;
+  margin: 20px;
+}
+
+
+/* div -> display : block;
+  == 한 행을 모두 차지
+  == wodth : 100%가 기본 값
+*/
+
+.container-2 > div {
+  width: 100%;
+  height: 30%;
+  background-color: pink;
+}
+/* :nth-child 로 해도됨 */
+.container-2 > div:first-child{
+  background-color: orange;
+  height: 50%;
+}
+
+.container-2 > div:last-child{
+  background-color: darkcyan;
+  height: 20%;
+}
+
+.container-3{
+  width: 400px;
+  height: 200px;
+  margin: 20px;
+  display: flex;
+  /* 내부 요소(item)을 유연하게 배치, 정렬하겠다고 지정하는 속성 */
+  flex-direction: row;
+  /* 중심축 방향을 row(왼쪽 -> 오른쪽) */
+}
+
+.container-3 > div{
+  width: 50%;
+  height: 100%;
+  /* inline, inline-block: 글자 취급 
+    -> 띄어쓰기, 엔터가 중간에 포함되어 
+    요소가 원하는 대로 배치되지 않을 수있다
+  */
+}
+
+.container-3 > div:first-child{
+  background-color: black;
+}
+
+.container-3 > div:last-child{
+  background-color: pink;
+}
+
+.container-4{
+  width: 600px;
+  height: 100px;
+  margin: 20px;
+  display: flex;
+}
+
+.container-4 > div{
+  height: 100%; /* align-items : stretch; 안해도 됨 (기본 속성) */
+}
+
+.container-4 > div:nth-child(1){
+  width: 10%;
+  background-color: red;
+}
+.container-4 > div:nth-child(2){
+  width: 35%;
+  background-color: orangered;
+}
+.container-4 > div:nth-child(3){
+  width: 10%;
+  background-color: yellow;
+}
+.container-4 > div:nth-child(4){
+  width: 35%;
+  background-color: green;
+}
+.container-4 > div:nth-child(5){
+  width: 10%;
+  background-color: blue;
+}
+
+/* 
+밑에 방식대로 해도된다. 다만 이런식으로 할시 
+각각의 색을 지정할려면 추가 css 코드가 필요하다
+.container-4 > div:nth-child(2n + 1)
+.container-4 > div:nth-child(2n)
+*/
+
+.container-5{
+  width: 500px;
+  height: 500px;
+  margin: 20px;
+}
+
+.container-5 > .row{
+  width: 100%; /* div는 block 형식 요소 == width가 기본 100%*/
+  height: 50%;
+  display: flex;
+  /* 내부 요소 가로 배치 */
+  /* flex-display: row; */
+  align-items: stretch; /* item이 교차축 방향을 꽉 채우도록 늘어남 */
+}
+
+.container-5 .col{
+  width: 50%;
+  height: 100%; /* flex row로 인해 height는 기본 100% 안써도 된다. */
+}

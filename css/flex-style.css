@@ -1,8 +1,8 @@
 /* 모든 적용 */
 *{
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  padding: 0; /* 다른 요소와의 간격 */
+  margin: 0; /* content, border 사이 간격 */
 }
 
 div{
